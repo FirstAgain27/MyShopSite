@@ -133,10 +133,13 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
     ]
 
+<<<<<<< HEAD
 MEDIA_URL = 'media/'
 
 MEDIA_ROOT = BASE_DIR / 'media/'
 
+=======
+>>>>>>> c0ea4098b0dc8e8d637a0e70f184338c19198d08
 INTERNAL_IPS = [
     # ...
     "127.0.0.1",
