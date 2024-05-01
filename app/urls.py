@@ -19,14 +19,11 @@ from re import DEBUG
 from django.contrib import admin
 from django.urls import path,include
 
-<<<<<<< HEAD
 from django.conf.urls.static import static
 
 from app import settings
 
-=======
 from app.settings import DEBUG
->>>>>>> c0ea4098b0dc8e8d637a0e70f184338c19198d08
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,15 +32,12 @@ urlpatterns = [
     
 ]
 
-<<<<<<< HEAD
 if settings.DEBUG:
     urlpatterns += [
         path("__debug__/", include("debug_toolbar.urls")),
     ]
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-=======
 if DEBUG:
     urlpatterns += [
         path("__debug__/", include("debug_toolbar.urls")),
         ]
->>>>>>> c0ea4098b0dc8e8d637a0e70f184338c19198d08

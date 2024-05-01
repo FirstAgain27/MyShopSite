@@ -52,7 +52,7 @@
                 {% endif %}
                 
                 <div class="card-body">
-                    <a href="../goods/product.html">
+                    <a href="{% url "catalog:product" product.slug %}">
                         <p class="card-title">{{ product.name }}</p>
                     </a>
                     <p class="card-text text-truncate">{{ product.description }}</p>
@@ -99,11 +99,3 @@
 {% endblock content %}
 
 
-
-{% block footer %}
-<footer class="py-4 bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Home Python Hub Studio 2023</p>
-    </div>
-</footer>
-{% endblock %}
