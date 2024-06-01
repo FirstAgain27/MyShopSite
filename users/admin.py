@@ -1,7 +1,5 @@
-from django.apps import AppConfig
+from django.contrib import admin
 
+from users.models import User
 
-class UsersConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'users'
-    verbose_name = 'Пользователи'
+admin.site.register(User)
