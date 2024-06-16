@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "deps/css/bootstrap/bootstrap.min.css"%}">
     <link rel="stylesheet" href="{% static "deps/css/my_css.css" %}">
-    <!-- Стиль footer-a для главной страницы -->
+    <!-- Стиль {% extends "base.html" %}-a для главной страницы -->
     {% block css %}
     
     {% endblock css %}
@@ -155,7 +155,7 @@
                                         </ul>
                                     </div>
                                     <div class="card mb-3 shadow-lg">
-                                        <div class="card-footer">
+                                        <div class="card-{% extends "base.html" %}">
                                             <p class="float-left">Итого <strong>1</strong> товар(а) на сумму</p>
                                             <h4 class="float-left"><strong>100.00 $</strong></h4>
                                         </div>
@@ -179,18 +179,20 @@
                     <!-- Пустой блок на Ваше усмотрение -->
                 </div>
                 <div class="col-lg-10">
+                    
+                    
                     <!-- Контент на странице -->
-                    {% block content %}
-                    {% endblock content %}
+                    {% include "includes/notifications.html" %}
+                    {% block content %}{% endblock content %}
                 </div>
             </div>
         </div>
     </section>
-    <footer class="py-4 bg-dark">
+    <{% extends "base.html" %} class="py-4 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Home Python Hub Studio 2023</p>
         </div>
-    </footer>
+    </{% extends "base.html" %}>
     <script src="{% static "deps/js/jquery/jquery-3.7.0.min.js" %}"></script>
     <script src="{% static "deps/js/jquery-events.js" %}"></script>
     <script src="{% static "deps/js/jquery-ajax.js" %}"></script>
