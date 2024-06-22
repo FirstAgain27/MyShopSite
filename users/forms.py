@@ -29,8 +29,7 @@ class UserRegistrationForm(UserCreationForm):
     username = forms.CharField() 
     email = forms.CharField()
     password1 = forms.CharField()
-    password2 = forms.CharField() 
-    
+    password2 = forms.CharField()
     
     
     
