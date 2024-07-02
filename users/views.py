@@ -48,7 +48,6 @@ def registration(request):
 
     return render(request, 'users/registration.html', context)
 
-
 @login_required
 def profile(request):
     if request.method == 'POST':
