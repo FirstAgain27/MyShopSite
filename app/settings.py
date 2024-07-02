@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
-from django.conf.global_settings import MEDIA_ROOT
+from django.conf.global_settings import LOGIN_URL, MEDIA_ROOT
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,10 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-ml6k_z_kr%ux_j-3=9-=^b%^nh1lwev!&%d!m(%cv+$j#cj(o6'
 
-
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -151,3 +150,4 @@ INTERNAL_IPS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.User'
+LOGIN_URL = "/user/login/"
