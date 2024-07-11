@@ -1,6 +1,4 @@
-from tabnanny import verbose
 from django.db import models
-from django.template.defaultfilters import length
 
 from goods.models import Products
 from users.models import User
@@ -17,6 +15,7 @@ class CartQueryset(models.QuerySet):
  
 
 class Cart(models.Model):
+    
     user = models.ForeignKey(to=User, on_delete= models.CASCADE, blank=True, null=True, verbose_name="Пользователь")
     product = models.ForeignKey(to=Products, on_delete= models.CASCADE, verbose_name="Товар")
     quantity = models.PositiveSmallIntegerField(default=0, verbose_name="Количество")
@@ -28,6 +27,7 @@ class Cart(models.Model):
         db_table = 'cart'
         verbose_name = "Корзина"
         verbose_name_plural = 'Корзина'
+        ordering = ("id",)
 
     objects = CartQueryset().as_manager()
 
