@@ -1,6 +1,7 @@
-from django.contrib import admin
-
-from carts.models import Cart
+from django.apps import AppConfig
 
 
-admin.site.register(Cart)
+class CartsConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'carts'
+    
